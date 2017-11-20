@@ -14,13 +14,19 @@ android:
   components:
     - tools
     - platform-tools
-    - build-tools-26.0.1
+    - build-tools-26.0.2
     - android-26
     - doc-26
+    - extra-android-m2repository
+    - extra-google-m2repository
+    - extra-android-support
+    - extra-google-google_play_services
 
 before_install:
     - pip install --user codecov
     - wget -P ./Parse/lib/ https://parseonbuddy.blob.core.windows.net/ppns/ppns-android-1.0.jar
+    - export TZ=Etc/UTC
+
 #    - mvn validate
 
 script:
